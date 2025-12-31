@@ -1,0 +1,186 @@
+/* =====================
+   GLOBAL
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* =====================
+   HEADER
+===================== */
+.app-header {
+  width: 100%;
+  padding: 30px 40px;
+  background: #f8fafc;
+}
+
+.brand-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand img {
+  width: 48px;
+  height: 48px;
+}
+
+.brand span {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.brand-blue {
+  color: #1e40af;
+}
+
+.brand-teal {
+  color: #14b8a6;
+}
+
+/* =====================
+   TAGLINE
+===================== */
+.tagline {
+  margin-top: 14px;
+  font-size: 1.25rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.tagline span {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* =====================
+   REACT ROOT
+===================== */
+#root {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* =====================
+   BUTTON (reuse)
+===================== */
+button {
+  background: linear-gradient(135deg, #2563eb, #14b8a6);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ===== HOME LAYOUT ===== */
+.home-container {
+  display: flex;
+  gap: 3rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin-top: -5rem;
+}
+
+/* LEFT SIDE */
+.home-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* FEATURE CARDS */
+.feature-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.feature-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* RIGHT SIDE */
+.home-right {
+  flex: 1;
+}
+
+/* ===== ANALYZE BUTTON ANIMATION ===== */
+button {
+  background: linear-gradient(135deg, #2563eb, #14b8a6);
+  color: white;
+  padding: 0.75rem 1.4rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .home-left {
+    order: 2;
+  }
+
+  .home-right {
+    order: 1;
+  }
+}

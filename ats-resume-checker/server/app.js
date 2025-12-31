@@ -1,0 +1,16 @@
+import express from "express";
+import cors from "cors";
+import resumeRoutes from "./routes/resumeRoutes.js";
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("ATS Resume Checker API is running 🚀");
+});
+
+app.use("/api/resume", resumeRoutes);
+
+export default app;
